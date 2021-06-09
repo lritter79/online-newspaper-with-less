@@ -6,25 +6,28 @@ body {
 }
 #container {
   background-color: #FEFBEA;
-  height: 100%;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100%;
 }
-#heading {
+#top {
+  border-bottom: 2px black solid;
+}
+#top #heading {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 @media screen {
-  #heading {
+  #top #heading {
     flex-direction: row;
   }
 }
 @media screen and (max-width: 615px) {
-  #heading {
+  #top #heading {
     flex-direction: column;
   }
 }
-#heading .headerLink {
+#top nav .navLink {
   color: #FF7F50;
   margin-block-start: 1em;
   margin-block-end: 1em;

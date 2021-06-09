@@ -13,30 +13,37 @@ body {
 
 #container{
     background-color: @backgroundcolor;
-    height: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100%;
 }
 
-#heading {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    @media screen {
-        flex-direction: row;
-        @media (max-width: 615px) {
-            flex-direction:  column;
-        }
-    }       
-           
-    .headerLink {
-        color: @primarycolor;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-size: @fontSize * 2;
+#top {
+    border-bottom: 2px black solid;
+
+    #heading {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        @media screen {
+            flex-direction: row;
+            @media (max-width: 615px) {
+                flex-direction:  column;
+            }
+        }                 
     }
+    nav {
+        .navLink {
+            color: @primarycolor;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-size: @fontSize * 2;
+        }
+    }    
 }
+
+
 
 li {
     color: ~"green";
