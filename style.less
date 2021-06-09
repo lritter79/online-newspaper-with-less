@@ -1,11 +1,39 @@
 @primarycolor: #FF7F50;
 @color:#800080;
+@backgroundcolor: #FEFBEA;
+
+html {
+     height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#container{
+    background-color: @backgroundcolor;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #heading {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    @media screen {
+        flex-direction: row;
+        @media (max-width: 615px) {
+            flex-direction:  column;
+        }
+    }       
+           
     .headerLink {
         color: @primarycolor;
-     }
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
 }
 
 li {
