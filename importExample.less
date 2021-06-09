@@ -1,0 +1,17 @@
+//imported
+li {
+    color: ~"green";
+}
+
+.article:extend(.mostPopular) {
+    font-size: 15px;
+ }
+
+ .mostPopular {
+    font-weight: bolder;
+ }
+
+ .mostPopular::before {
+    content: "Most Popular Today: ";
+    color: red;
+ }

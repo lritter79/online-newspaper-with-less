@@ -1,3 +1,22 @@
+li {
+  color: green;
+}
+.article {
+  font-size: 15px;
+}
+.mostPopular,
+.article {
+  font-weight: bolder;
+}
+.mostPopular::before {
+  content: "Most Popular Today: ";
+  color: red;
+}
+/* 
+Variable scope specifies the place of the available variable. 
+The variables will be searched from the local scope and if they are not available, 
+then compiler will search from the parent scope.
+*/
 html {
   height: 100%;
 }
@@ -9,13 +28,30 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   height: 100%;
 }
+/*
+Nesting
+*/
 #top {
   border-bottom: 2px black solid;
 }
+#top .flex {
+  display: flex;
+  align-items: center;
+}
+@media screen {
+  #top .flex {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 615px) {
+  #top .flex {
+    flex-direction: column;
+  }
+}
 #top #heading {
   display: flex;
-  justify-content: left;
   align-items: center;
+  justify-content: left;
 }
 @media screen {
   #top #heading {
@@ -38,8 +74,8 @@ body {
 }
 #top nav {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
 }
 @media screen {
   #top nav {
@@ -79,7 +115,4 @@ body {
 }
 #top nav #home:hover {
   color: grey;
-}
-li {
-  color: green;
 }
