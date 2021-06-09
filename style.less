@@ -1,6 +1,8 @@
 @primarycolor: black;
 @backgroundcolor: #FEFBEA;
 @fontSize: 5px;
+@scopedVar: @x;
+@x: 10px;
 
 html {
      height: 100%;
@@ -60,7 +62,8 @@ body {
             margin-inline-end: 0px;
             font-size: @fontSize * 2;
             font-weight: bold;
-            padding: 2px 7px 2px 7px;
+            padding: 2px @scopedVar 2px @x;
+            @x: 7px;
 
             &:hover {
                 color: grey;
