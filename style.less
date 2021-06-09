@@ -1,15 +1,10 @@
 //import example
-@import url(importExample.less);
+@import url(articleStyles.less);
+@import url(navbarStyles.less);
 @primarycolor: black;
 @backgroundcolor: #FEFBEA;
 @fontSize: 5px;
-/* 
-Variable scope specifies the place of the available variable. 
-The variables will be searched from the local scope and if they are not available, 
-then compiler will search from the parent scope.
-*/
-@scopedVar: @x;
-@x: 10px;
+
 
 html {
      height: 100%;
@@ -22,7 +17,17 @@ body {
 #container{
     background-color: @backgroundcolor;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    height: 100%;
+}
+
+.flex {
+    display: flex;   
+    align-items: center;
+    @media screen {
+        flex-direction: row;
+        @media (max-width: 615px) {
+            flex-direction:  column;
+        }
+    } 
 }
 
 /*
@@ -30,16 +35,7 @@ Nesting
 */
 #top {
     border-bottom: 2px @primarycolor solid;
-    .flex {
-        display: flex;   
-        align-items: center;
-        @media screen {
-            flex-direction: row;
-            @media (max-width: 615px) {
-                flex-direction:  column;
-            }
-        } 
-    }
+    
 
     #heading {
         .flex;
@@ -53,37 +49,17 @@ Nesting
                 border: 2px solid;
                 border-radius: 50%;
                 height: 50px;              
-              }
+            }
         }          
-    }
-    nav {        
-        .flex;
-        justify-content: space-evenly;
-        .navLink {
-            color: @primarycolor;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-size: @fontSize * 2;
-            font-weight: bold;
-            padding: 2px @scopedVar 2px @x;
-            @x: 7px;
-
-            &:hover {
-                color: grey;
-            }            
-        }
-
-        #home {
-            .navLink;
-            background-color: @primarycolor;
-            color: @backgroundcolor;
-            border-radius: 3px;  
-          }
-        
-    }    
+    } 
 }
 
 
+#bottom{
+    background-color: darkgrey;
+    #disclaimer {
+        font-size: @fontSize * 2;
+        font-weight: lighter;
+    }
+}
 

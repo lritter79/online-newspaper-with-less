@@ -1,0 +1,28 @@
+//imported
+li {
+    color: ~"green";
+}
+
+//https://www.tutorialspoint.com/less/less_extend.htm extends
+.article {
+   font-size: 15px;
+ }
+
+ .mostPopular {
+    font-weight: bolder;
+ }
+
+ .mostPopular::before {
+    content: "Most Popular Today: ";
+    color: red;
+ }
+
+ ol {
+   padding-left: 10px;
+ }
+
+ //https://www.tutorialspoint.com/less/less_extend.htm
+ ul {
+   &:extend(ol);
+   padding-top: 10px;
+ }

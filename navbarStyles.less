@@ -1,0 +1,42 @@
+/* 
+Variable scope specifies the place of the available variable. 
+The variables will be searched from the local scope and if they are not available, 
+then compiler will search from the parent scope.
+*/
+@scopedVar: @x;
+@x: 10px;
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#home{
+    background-color: @primarycolor;
+    color: @backgroundcolor;
+    border-radius: 3px;     
+}
+
+.navLink {
+    text-decoration: none;
+    color: @primarycolor;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: @fontSize * 2;
+    font-weight: bold;
+    padding: 2px @scopedVar 2px @x;
+    @x: 7px;             
+}
+
+#home, .navLink {
+    &:hover{  
+        color: grey;
+    }  
+}
+
+
+
+
+

@@ -4,19 +4,49 @@ li {
 .article {
   font-size: 15px;
 }
-.mostPopular,
-.article {
+.mostPopular {
   font-weight: bolder;
 }
 .mostPopular::before {
   content: "Most Popular Today: ";
   color: red;
 }
+ol,
+ul {
+  padding-left: 10px;
+}
+ul {
+  padding-top: 10px;
+}
 /* 
 Variable scope specifies the place of the available variable. 
 The variables will be searched from the local scope and if they are not available, 
 then compiler will search from the parent scope.
 */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+#home {
+  background-color: black;
+  color: #FEFBEA;
+  border-radius: 3px;
+}
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 7px 2px 7px;
+}
+#home:hover,
+.navLink:hover {
+  color: grey;
+}
 html {
   height: 100%;
 }
@@ -26,27 +56,26 @@ body {
 #container {
   background-color: #FEFBEA;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  height: 100%;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+@media screen {
+  .flex {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 615px) {
+  .flex {
+    flex-direction: column;
+  }
 }
 /*
 Nesting
 */
 #top {
   border-bottom: 2px black solid;
-}
-#top .flex {
-  display: flex;
-  align-items: center;
-}
-@media screen {
-  #top .flex {
-    flex-direction: row;
-  }
-}
-@media screen and (max-width: 615px) {
-  #top .flex {
-    flex-direction: column;
-  }
 }
 #top #heading {
   display: flex;
@@ -72,47 +101,10 @@ Nesting
   border-radius: 50%;
   height: 50px;
 }
-#top nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+#bottom {
+  background-color: darkgrey;
 }
-@media screen {
-  #top nav {
-    flex-direction: row;
-  }
-}
-@media screen and (max-width: 615px) {
-  #top nav {
-    flex-direction: column;
-  }
-}
-#top nav .navLink {
-  color: black;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+#bottom #disclaimer {
   font-size: 10px;
-  font-weight: bold;
-  padding: 2px 7px 2px 7px;
-}
-#top nav .navLink:hover {
-  color: grey;
-}
-#top nav #home {
-  color: black;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 2px 7px 2px 7px;
-  background-color: black;
-  color: #FEFBEA;
-  border-radius: 3px;
-}
-#top nav #home:hover {
-  color: grey;
+  font-weight: lighter;
 }
