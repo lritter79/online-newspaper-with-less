@@ -30,7 +30,8 @@ body {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-size: 10px;
 }
 li {
-  color: #800080;
+  color: green;
 }
