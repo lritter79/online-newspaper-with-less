@@ -22,37 +22,35 @@ nav {
     font-weight: bold;
     padding: @scopedVar @scopedVar*2 5px @x*2;
     @x: 5px;    
+    transition: background-color 0.5s;   
+    
           
 }
 
 
-
-.navLink, .navLinkBottom {
-    transition: background-color 0.5s;   
-    &:hover{        
-        background-color: whitesmoke;
-    }  
-}
-
-#home{
+#home:extend(.navLink){
     transition: none;
     background-color: @primarycolor;
     color: @backgroundcolor;
     border-radius: 3px;     
 }
 
-#home, .navLink, .navLinkBottom {
-    &:hover{  
-        color: grey;
-    }  
-}
-
-
-
-
 //https://www.tutorialspoint.com/less/less_extend.htm
 .navLinkBottom:extend(.navLink) {
     font-weight: lighter;
+
+}
+
+.navLink, .navLinkBottom {
+    &:hover{        
+        background-color: whitesmoke;
+    }  
+}
+
+.navLink, #home, .navLinkBottom {
+    &:hover{        
+        color: grey;
+    }  
 }
 
 

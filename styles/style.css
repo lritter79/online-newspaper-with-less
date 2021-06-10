@@ -28,6 +28,7 @@ nav {
   justify-content: space-evenly;
 }
 .navLink,
+#home,
 .navLinkBottom {
   text-decoration: none;
   color: black;
@@ -38,15 +39,7 @@ nav {
   font-size: 15px;
   font-weight: bold;
   padding: 5px 10px 5px 10px;
-}
-.navLink,
-.navLinkBottom,
-.navLinkBottom {
   transition: background-color 0.5s;
-}
-.navLink:hover,
-.navLinkBottom:hover {
-  background-color: whitesmoke;
 }
 #home {
   transition: none;
@@ -54,13 +47,17 @@ nav {
   color: #FEFBEA;
   border-radius: 3px;
 }
-#home:hover,
-.navLink:hover,
-.navLinkBottom:hover {
-  color: grey;
-}
 .navLinkBottom {
   font-weight: lighter;
+}
+.navLink:hover,
+.navLinkBottom:hover {
+  background-color: whitesmoke;
+}
+.navLink:hover,
+#home:hover,
+.navLinkBottom:hover {
+  color: grey;
 }
 #search {
   margin-left: auto;
