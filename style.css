@@ -13,7 +13,7 @@ li {
 }
 ol,
 ul {
-  padding-left: 10px;
+  font-family: sans-serif;
 }
 ul {
   padding-top: 10px;
@@ -27,25 +27,40 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
-#home {
-  background-color: black;
-  color: #FEFBEA;
-  border-radius: 3px;
-}
-.navLink {
+.navLink,
+.navLinkBottom {
   text-decoration: none;
   color: black;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: bold;
   padding: 2px 7px 2px 7px;
 }
+.navLink,
+.navLinkBottom,
+.navLinkBottom {
+  transition: background-color 0.5s;
+}
+.navLink:hover,
+.navLinkBottom:hover {
+  background-color: whitesmoke;
+}
+#home {
+  transition: none;
+  background-color: black;
+  color: #FEFBEA;
+  border-radius: 3px;
+}
 #home:hover,
-.navLink:hover {
+.navLink:hover,
+.navLinkBottom:hover {
   color: grey;
+}
+.navLinkBottom {
+  font-weight: lighter;
 }
 html {
   height: 100%;
@@ -62,12 +77,14 @@ body {
   align-items: center;
 }
 @media screen {
-  .flex {
+  .flex,
+  #navbar > nav {
     flex-direction: row;
   }
 }
 @media screen and (max-width: 615px) {
-  .flex {
+  .flex,
+  #navbar > nav {
     flex-direction: column;
   }
 }
@@ -101,10 +118,38 @@ Nesting
   border-radius: 50%;
   height: 50px;
 }
+.title {
+  padding-top: 2px;
+  padding-left: 2px;
+}
+.title {
+  margin: 2px;
+}
+.subType {
+  font-size: 15px;
+}
 #bottom {
   background-color: darkgrey;
 }
 #bottom #disclaimer {
   font-size: 10px;
   font-weight: lighter;
+}
+#bottom,
+#subscribe {
+  text-align: center;
+}
+#subscribe {
+  margin: 5px;
+  border-top: 1px solid black;
+}
+#subTypes {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+#subTypes input[type="checkbox"]:checked {
+  background-color: black;
 }

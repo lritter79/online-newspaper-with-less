@@ -11,12 +11,6 @@ nav {
     justify-content: space-evenly;
 }
 
-#home{
-    background-color: @primarycolor;
-    color: @backgroundcolor;
-    border-radius: 3px;     
-}
-
 .navLink {
     text-decoration: none;
     color: @primarycolor;
@@ -24,18 +18,42 @@ nav {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-size: @fontSize * 2;
+    font-size: @fontSize * 3;
     font-weight: bold;
     padding: 2px @scopedVar 2px @x;
-    @x: 7px;             
+    @x: 7px;    
+          
 }
 
-#home, .navLink {
+
+
+.navLink, .navLinkBottom {
+    transition: background-color 0.5s;   
+    &:hover{        
+        background-color: whitesmoke;
+    }  
+}
+
+#home{
+    transition: none;
+    background-color: @primarycolor;
+    color: @backgroundcolor;
+    border-radius: 3px;     
+}
+
+#home, .navLink, .navLinkBottom {
     &:hover{  
         color: grey;
     }  
 }
 
+
+
+
+//https://www.tutorialspoint.com/less/less_extend.htm
+.navLinkBottom:extend(.navLink) {
+    font-weight: lighter;
+}
 
 
 

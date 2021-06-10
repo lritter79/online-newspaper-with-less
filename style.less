@@ -22,14 +22,17 @@ body {
 .flex {
     display: flex;   
     align-items: center;
+     
+}
+
+.flex, #navbar > nav {
     @media screen {
         flex-direction: row;
         @media (max-width: 615px) {
             flex-direction:  column;
         }
-    } 
+    }
 }
-
 /*
 Nesting
 */
@@ -38,6 +41,7 @@ Nesting
     
 
     #heading {
+        //mixin https://www.tutorialspoint.com/less/less_mixins.htm
         .flex;
         justify-content: left;
         div {
@@ -55,11 +59,66 @@ Nesting
 }
 
 
+ //parameter mixin: https://www.tutorialspoint.com/less/less_parametric_mixins.htm
+ .padding(@pxTop; @pxLeft) {
+    padding-top: @pxTop;
+    padding-left: @pxLeft;
+ }
+ 
+ .title {
+    .padding(2px; 2px);
+ }
+
+ //LESS - Passing Rulesets to Mixins
+ //https://www.tutorialspoint.com/less/passing_rulesets_to_mixins.html
+ @detached-ruleset: {
+    .mixin() {
+       margin: 2px;
+    }
+ };
+
+ .title {
+    @detached-ruleset();
+    .mixin();
+ }
+
+ .mixinSubType (@a) when (@a > 10) {
+    font-size: @a * 2;
+ }
+ 
+ .mixinSubType (@a) when (@a < 10) {
+    font-size: @a * 3;
+ }
+ 
+ .subType {
+    .mixinSubType(@fontSize)
+ }
+
 #bottom{
-    background-color: darkgrey;
+    background-color: darkgrey;   
     #disclaimer {
         font-size: @fontSize * 2;
-        font-weight: lighter;
+        font-weight: lighter;       
     }
 }
 
+#bottom, #subscribe {
+    text-align: center;
+}
+
+#subscribe {
+    margin: 5px;
+    border-top: 1px solid black;
+    
+}
+
+#subTypes {
+    text-align: left;
+    margin-left: auto;
+    margin-right:auto;
+    width: fit-content;
+    margin-bottom: 16px;
+    input[type="checkbox"]:checked{
+        background-color: black;
+    }
+}    
