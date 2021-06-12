@@ -133,14 +133,14 @@ Nesting
 .subType {
   font-size: 15px;
 }
-#bottom {
+#footer {
   background-color: darkgrey;
 }
-#bottom #disclaimer {
+#footer #disclaimer {
   font-size: 10px;
   font-weight: lighter;
 }
-#bottom,
+#footer,
 #subscribe {
   text-align: center;
 }
