@@ -1,4 +1,4 @@
-import logo from '../images/logo.png'
+
 
 function Heading () {
     return (
@@ -10,7 +10,7 @@ function Heading () {
                   </h3>              
               </div>
               <div id="logo">
-                  <img src={logo} alt="Logo" title="Logo" />
+                  <img src="/images/logo.png" alt="Logo" title="Logo" />
               </div>
               <div id="slogan">
                   <i>

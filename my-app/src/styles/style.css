@@ -3,6 +3,9 @@ li {
 }
 .article {
   font-size: 15px;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
 }
 .mostPopular {
   font-weight: bolder;

@@ -2,7 +2,7 @@ function Navbar() {
     return (
         <div id="navbar">
             <nav>
-                    <a id="home" href="index.html">
+                    <a id="home" href>
                         Domum
                     </a>
                     <a class="navLink" href>
