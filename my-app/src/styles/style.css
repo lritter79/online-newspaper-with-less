@@ -43,12 +43,12 @@ nav {
   font-weight: bold;
   padding: 5px 10px 5px 10px;
   transition: background-color 0.5s;
+  border-radius: 3px;
 }
 #home {
   transition: none;
   background-color: black;
   color: #FEFBEA;
-  border-radius: 3px;
 }
 .navLinkBottom {
   font-weight: lighter;
@@ -79,6 +79,9 @@ body {
 #container {
   background-color: #FEFBEA;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+#articles {
+  justify-content: space-evenly;
 }
 .flex {
   display: flex;

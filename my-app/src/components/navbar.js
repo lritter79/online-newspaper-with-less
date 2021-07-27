@@ -5,19 +5,19 @@ function Navbar() {
                     <a id="home" href>
                         Domum
                     </a>
-                    <a class="navLink" href>
+                    <a className="navLink" href>
                         Ludis
                     </a>
-                    <a class="navLink" href>
+                    <a className="navLink" href>
                         Imperatoria
                     </a>
-                    <a class="navLink" href>
+                    <a className="navLink" href>
                         Senatus
                     </a>
-                    <a class="navLink" href>
+                    <a className="navLink" href>
                         Cibus
                     </a>
-                    <a class="navLink" href>
+                    <a className="navLink" href>
                         Religio
                     </a>
             </nav> 
